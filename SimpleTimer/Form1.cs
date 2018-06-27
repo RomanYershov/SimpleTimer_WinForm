@@ -1,4 +1,5 @@
-﻿using SimpleTimer.ExecuteMethods;
+﻿using SimpleTimer.Abstraction;
+using SimpleTimer.ExecuteMethods;
 using SimpleTimer.Models;
 using System;
 using System.Collections.Generic;
@@ -25,8 +26,11 @@ namespace SimpleTimer
         private void button1_Click(object sender, EventArgs e)
         {
             // timer = new MyTimer(new IntervalTimer(textBoxShow,int.Parse(textBoxInterval.Text)));
-            WorkRelaxTimerBuilder timerBuilder = new WorkRelaxTimerBuilder(this ,new WorkRelaxIntervalTimer(1, 2));
-            timerBuilder.Build();
+            using (TimerBuilder timerBuilder = new IntervalTimerBuilder(this, new WorkRelaxIntervalTimer(1,2)))
+            {
+                timerBuilder.Build();
+            }
+            
 
             //timer = new MyTimer(new WorkRelaxIntervalTimer(1, 2));
             //timer.Start(100);
@@ -35,9 +39,10 @@ namespace SimpleTimer
 
         private void btn_reset_Click(object sender, EventArgs e)
         {
-         if (timer == null) return;
-            timer.Reset();
-            textBoxShow.Text = "0";
+            using (TimerBuilder timerBuilder = new IntervalTimerBuilder(this, new IntervalTimer(2)))
+            {
+                timerBuilder.Build();
+            }
         }
     }
 

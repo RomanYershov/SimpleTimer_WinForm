@@ -11,32 +11,49 @@ namespace SimpleTimer.ExecuteMethods
 {
     class IntervalTimer : IExecutable
     {
-        private TextBox _textBox;
+
         private int _interval;
         private int count = 0;
+        public List<Control> Controls { get; set; }
 
-        public IntervalTimer(TextBox textBox)
+        public IntervalTimer()
         {
-            _textBox = textBox;
-            _interval = 60;
+            Controls = new List<Control>
+            {
+                new TextBox()  {  Name = "showTB"},
+                new TextBox(){Name = "setIntervalTB"}
+            };
+             
+            _interval = int.Parse(Controls[1].Text);
         }
-        public IntervalTimer(TextBox textBox, int interval)
+        public IntervalTimer(int interval)
         {
-            _textBox = textBox;
-            _interval = interval;
+            Controls = new List<Control>
+            {
+                new TextBox()  {  Name = "showTB"},
+                new TextBox(){Name = "setIntervalTB"}
+            };
+
+            _interval  = string.IsNullOrEmpty(Controls[1].Text)? 2 : int.Parse(Controls[1].Text);
         }
+
+
+
+
         public void Execute(object obj)
         {
-            _textBox.BeginInvoke((MethodInvoker)(Test));
-            _textBox.ForeColor = Color.Black;
+            var tb = Controls.FirstOrDefault(t => t.Name.Contains("showTB"));
+            tb.BeginInvoke((MethodInvoker)(StartTimer));
+            tb.ForeColor = Color.Black;
         }
 
-        private void Test()
+        private void StartTimer()
         {
-            _textBox.Text = (++count).ToString();
+            var tb = Controls.FirstOrDefault(t => t.Name.Contains("showTB"));
+            tb.Text = (++count).ToString();
             if (count % _interval == 0)
             {
-                _textBox.ForeColor = Color.Red;
+                tb.ForeColor = Color.Red;
                 Console.Beep(3000, 100);
             }
 

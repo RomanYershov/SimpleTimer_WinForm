@@ -11,10 +11,10 @@ using Timer.Core.TimerModel;
 
 namespace SimpleTimer.Abstraction
 {
-   public abstract class TimerBuilder
+   public abstract class TimerBuilder : IDisposable
     {
-        public MyTimer MyTimer { get; set; }
-        public GroupBox Box { get; set; }
+        protected MyTimer MyTimer { get; set; }
+        protected GroupBox Box { get; set; }
         private Form _myForm;
         
         
@@ -34,7 +34,7 @@ namespace SimpleTimer.Abstraction
             Box.Width = 440;
             Box.Height = 100;
             Box.Location = new Point(12, 140);
-            Box.BackColor = Color.AliceBlue;
+            Box.BackColor = Color.CadetBlue;
             Box.Controls.Add(CreateCloseTimerBtn());           
             _myForm.Controls.Add(Box);           
         }
@@ -48,16 +48,23 @@ namespace SimpleTimer.Abstraction
                 Height = 22,
                 Name = "btnClose",
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(415, 10)
+                Location = new Point(418, 5)
             };
-            btnClose.Click
+            btnClose.Click += BtnCloseClick;
             return btnClose;
         }
 
         private void BtnCloseClick(object sender, EventArgs e)
         {
-
+            Box.Dispose();
+            MyTimer.Reset();
         }
         public abstract void Build();
+
+        public void Dispose()
+        {
+            ////Box.Dispose();
+            //MyTimer.Reset();
+        }
     }
 }
