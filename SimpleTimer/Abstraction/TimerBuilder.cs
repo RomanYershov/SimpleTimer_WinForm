@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using Timer.Core.Abstraction;
 using Timer.Core.TimerModel;
 
@@ -34,7 +35,22 @@ namespace SimpleTimer.Abstraction
             Box.Height = 100;
             Box.Location = new Point(12, 140);
             Box.BackColor = Color.AliceBlue;
-            _myForm.Controls.Add(Box);
+            Box.Controls.Add(CreateCloseTimerBtn());
+            _myForm.Controls.Add(Box);           
+        }
+
+        private Button CreateCloseTimerBtn()
+        {
+            Button btnClose = new Button
+            {
+                Text = "X",
+                Width = 24,
+                Height = 24,
+                Name = "btnClose",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new Point(558,13)
+            };
+            return btnClose;
         }
         public abstract void Build();
     }
