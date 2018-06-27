@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Timer.Core.Abstraction;
 
 namespace SimpleTimer.ExecuteMethods
@@ -36,9 +37,11 @@ namespace SimpleTimer.ExecuteMethods
             }
         }
 
+        public List<Control> Controls { get; set; }
 
         public WorkRelaxIntervalTimer(int workTime, int relaxTime)
         {
+            Controls = new List<Control>();
             WorkTime = workTime;
             RelaxTime = relaxTime;
         }

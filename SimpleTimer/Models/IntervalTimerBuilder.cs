@@ -1,6 +1,7 @@
 ﻿using SimpleTimer.Abstraction;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,18 @@ namespace SimpleTimer.Models
 {
     public class IntervalTimerBuilder : TimerBuilder
     {
-        private TextBox _textBoxShowTime;
-        
-        public IntervalTimerBuilder(Form1 myForm, IExecutable func) : base(myForm,func)
+        //private TextBox _textBoxShowTime;
+
+        public IntervalTimerBuilder(Form1 myForm, IExecutable func) : base(myForm, func)
         {
+            var showTb = func.Controls.FirstOrDefault(t => t.Name.Contains("showTB"));
+            var setIntervalTb = func.Controls.FirstOrDefault(t => t.Name.Contains("setIntervalTB"));
+
+            if (showTb == null || setIntervalTb == null) return;
+
+            showTb.Location = new Point(60, 60);
+            setIntervalTb.Location = new Point(200, 60);
+            Box.Controls.AddRange(new Control[] { showTb, setIntervalTb });
         }
 
         public override void Build()
@@ -35,7 +44,7 @@ namespace SimpleTimer.Models
 
         private void BtnStartClick(object sender, EventArgs e)
         {
-            MyTimer.Start(100);
+            MyTimer.Start(1000);
         }
     }
 }
