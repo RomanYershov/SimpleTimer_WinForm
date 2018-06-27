@@ -35,7 +35,7 @@ namespace SimpleTimer.Abstraction
             Box.Height = 100;
             Box.Location = new Point(12, 140);
             Box.BackColor = Color.AliceBlue;
-            Box.Controls.Add(CreateCloseTimerBtn());
+            Box.Controls.Add(CreateCloseTimerBtn());           
             _myForm.Controls.Add(Box);           
         }
 
@@ -44,13 +44,19 @@ namespace SimpleTimer.Abstraction
             Button btnClose = new Button
             {
                 Text = "X",
-                Width = 24,
-                Height = 24,
+                Width = 22,
+                Height = 22,
                 Name = "btnClose",
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new Point(558,13)
+                Location = new Point(415, 10)
             };
+            btnClose.Click
             return btnClose;
+        }
+
+        private void BtnCloseClick(object sender, EventArgs e)
+        {
+
         }
         public abstract void Build();
     }
