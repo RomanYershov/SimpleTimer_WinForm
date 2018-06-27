@@ -1,0 +1,6 @@
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\Timer.Core\bin\Debug\Timer.Core.dll
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\Timer.Core\bin\Debug\Timer.Core.pdb
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\Timer.Core\obj\Debug\Timer.Core.csprojResolveAssemblyReference.cache
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\Timer.Core\obj\Debug\Timer.Core.csproj.CoreCompileInputs.cache
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\Timer.Core\obj\Debug\Timer.Core.dll
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\Timer.Core\obj\Debug\Timer.Core.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTimer", "SimpleTimer\SimpleTimer.csproj", "{4C1D539B-0AFD-4D92-912D-15ECC9BEE22F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer.Core", "Timer.Core\Timer.Core.csproj", "{0396FCE1-FFCA-4ED8-BD21-233AB43048A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C1D539B-0AFD-4D92-912D-15ECC9BEE22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1D539B-0AFD-4D92-912D-15ECC9BEE22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1D539B-0AFD-4D92-912D-15ECC9BEE22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1D539B-0AFD-4D92-912D-15ECC9BEE22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0396FCE1-FFCA-4ED8-BD21-233AB43048A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0396FCE1-FFCA-4ED8-BD21-233AB43048A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0396FCE1-FFCA-4ED8-BD21-233AB43048A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0396FCE1-FFCA-4ED8-BD21-233AB43048A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B07FDDB-8109-4048-9EF8-1E3DB91EAF15}
+	EndGlobalSection
+EndGlobal

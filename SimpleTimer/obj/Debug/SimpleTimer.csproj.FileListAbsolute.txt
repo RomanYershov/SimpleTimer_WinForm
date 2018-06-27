@@ -1,0 +1,13 @@
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\bin\Debug\SimpleTimer.exe.config
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\bin\Debug\SimpleTimer.exe
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\bin\Debug\SimpleTimer.pdb
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.csprojResolveAssemblyReference.cache
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.Form1.resources
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.Properties.Resources.resources
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.csproj.GenerateResource.cache
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.csproj.CoreCompileInputs.cache
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.csproj.CopyComplete
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.exe
+c:\users\tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\obj\Debug\SimpleTimer.pdb
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\bin\Debug\Timer.Core.dll
+C:\Users\Tom\documents\visual studio 2017\Projects\SimpleTimer\SimpleTimer\bin\Debug\Timer.Core.pdb
