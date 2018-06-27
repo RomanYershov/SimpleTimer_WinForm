@@ -14,11 +14,11 @@ namespace SimpleTimer.Abstraction
     {
         public MyTimer MyTimer { get; set; }
         public GroupBox Box { get; set; }
-        private Form1 _myForm;
+        private Form _myForm;
         
         
 
-        public TimerBuilder(Form1 myForm, IExecutable func)
+        public TimerBuilder(Form myForm, IExecutable func)
         {
             MyTimer = new MyTimer(func);
             _myForm = myForm;
